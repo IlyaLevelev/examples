@@ -31,6 +31,9 @@ public class Main {
         int total = Main.numAvailableProperties(properties2);
         System.out.println("total = " + total);
 
+        List<Property> availableProperies = listAvailableProperties(properties2);
+        System.out.println(availableProperies);
+
     }
 
     /**
@@ -58,7 +61,7 @@ public class Main {
         List<Property> result = new ArrayList<>();
         for (Property property : properties) {
             if (!property.sold) {
-            result.add(property)
+            result.add(property);
             }
         }
         return result;
