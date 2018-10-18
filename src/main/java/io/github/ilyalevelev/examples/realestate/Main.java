@@ -58,8 +58,7 @@ public class Main {
         List<Property> result = new ArrayList<>();
         for (Property property : properties) {
             if (!property.sold) {
-            result.add(property);
-            test
+            result.add(property)
             }
         }
         return result;
