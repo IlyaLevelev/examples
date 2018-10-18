@@ -19,6 +19,6 @@ public class Property {
     // It is usually used to test, debug, for the developer, not to show to the user
     @Override
     public String toString() {
-        return this.area + " - " + this.city;
+        return this.area + " - " + this.city + " - " + this.price;
     }
 }
