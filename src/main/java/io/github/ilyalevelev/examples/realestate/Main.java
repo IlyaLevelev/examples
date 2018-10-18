@@ -12,6 +12,9 @@ public class Main {
         Property p2 = new Property("Barcelona", "Eixample", 150000, true);
         Property p3 = new Property("Barcelona", "Clot", 150000, false);
 
+        String message = "The fist property is " + p1;
+        System.out.println(message);
+
         List<Property> properties = new ArrayList<>();
         properties.add(p1);
         properties.add(p2);
@@ -31,8 +34,10 @@ public class Main {
         int total = Main.numAvailableProperties(properties2);
         System.out.println("total = " + total);
 
-        List<Property> availableProperies = listAvailableProperties(properties2);
-        System.out.println(availableProperies);
+        List<Property> availableProperties = listAvailableProperties(properties2);
+        for (Property availableProperty : availableProperties) {
+            System.out.println(availableProperty);
+        }
 
     }
 
