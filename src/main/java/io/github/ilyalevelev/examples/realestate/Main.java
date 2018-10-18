@@ -53,4 +53,14 @@ public class Main {
      * Given a list of properties this function returns a list of the not sold properties.
      */
 
+    public static List<Property> listAvailableProperties(List<Property> properties){
+
+        List<Property> result = new ArrayList<>();
+        for (Property property : properties) {
+            if (!property.sold) {
+            result.add(property);
+            }
+        }
+        return result;
+    }
 }
