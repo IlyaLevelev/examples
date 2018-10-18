@@ -59,6 +59,7 @@ public class Main {
         for (Property property : properties) {
             if (!property.sold) {
             result.add(property);
+            test
             }
         }
         return result;
