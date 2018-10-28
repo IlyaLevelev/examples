@@ -16,16 +16,44 @@ public class Callbacks {
             int x = printAndLength("hi");
             System.out.println(x);
         });
-    }
+
+        String y = padRight("cat", 4);
+        System.out.println(y);
+
+        functionSwitch(true, () -> { printRepeat(3, "cat")};, () -> {
+            printAndLength("hello")});
+
+                }
 
     /**
      * Given a string and a number n, returns a string with spaces on the right until the length is n.
      * Example: padRight("cat", 7) ---> "cat    "
      */
 
+    public static String padRight (String text, int number){
+
+        String result = text;
+        while (result.length() != number) {
+
+            result = result + " ";
+        }
+
+        return result;
+    }
+
+
     /**
      * Given a boolean b and 2 functions f1 and f2, executes f1 if b is true, or f2 if b is false.
      */
+
+        public static void functionSwitch (boolean b, Runnable f1, Runnable f2){
+            if (b) {
+                f1.run();
+            }
+                else{
+                    f2.run();
+                }
+        }
 
     /** Given a number n and a function, calls the function n times */
     public static void repeat(int n, Runnable function) {
